@@ -1,0 +1,25 @@
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  color: var(--text-primary-grey);
+
+  font-family: "Roboto", sans-serif;
+  @include font(14px, null, 1.71, 0.03em);
+}
