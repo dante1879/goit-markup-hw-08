@@ -1,5 +1,13 @@
-.what-we-do__list {
-  display: flex;
+.what-we-do {
+  display: none;
+
+  &__list {
+    display: flex;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }
 
 .what-we-do__item {

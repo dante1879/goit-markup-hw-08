@@ -1,5 +1,28 @@
 .header {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1428;
+  letter-spacing: 0.02em;
   border-bottom: 1px solid var(--header-bottom-border);
+  &__container {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+
+    @media screen and (min-width: 480px) {
+      width: 480px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 768px;
+      height: 80px;
+    }
+    @media screen and (min-width: 1200x) {
+      width: 1170px;
+      height: 80px;
+    }
+  }
 }
 
 .main-menu,
@@ -26,6 +49,19 @@
   }
   &--black {
     color: var(--logo-black);
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
   }
 }
 
@@ -72,12 +108,24 @@
 }
 
 .contact-us {
+  display: none;
   margin-left: auto;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    &__item:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
   &__icon {
     fill: currentColor;
-  }
-  &__item:not(:last-child) {
-    margin-right: 40px;
   }
 }
 
@@ -94,5 +142,22 @@
   &:hover,
   &:focus {
     color: var(--primary-blue);
+  }
+  &--mail {
+    margin-left: 30px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.1666;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.1428;
   }
 }

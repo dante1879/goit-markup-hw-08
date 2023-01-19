@@ -15,7 +15,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
   <body>
@@ -46,7 +45,9 @@
         </nav>
         <ul class="contact-us list">
           <li class="contact-us__item">
-            <a href="mailto:info@devstudio.com" class="link contact-us__link"
+            <a
+              href="mailto:info@devstudio.com"
+              class="link contact-us__link contact-us__link--mail"
               ><svg width="16" height="12" class="contact-us__icon">
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
@@ -54,7 +55,10 @@
             >
           </li>
           <li class="contact-us__item">
-            <a href="tel:+380961111111" class="link contact-us__link">
+            <a
+              href="tel:+380961111111"
+              class="link contact-us__link contact-us__link--phone"
+            >
               <svg width="10" height="16" class="contact-us__icon">
                 <use href="./images/sprite.svg#icon-smartphone"></use>
               </svg>
@@ -62,12 +66,115 @@
             >
           </li>
         </ul>
+        <div class="mobile-menu">
+          <button
+            type="button"
+            class="mobile-menu__button--open"
+            data-menu-open
+          >
+            <svg width="40" height="40">
+              <use
+                class="icon-menu"
+                href="./images/sprite.svg#icon-mobile-menu"
+              ></use>
+            </svg>
+          </button>
+          <div class="container mobile-menu__container is-hidden" data-menu>
+            <button
+              type="button"
+              class="mobile-menu__button--close"
+              data-menu-close
+            >
+              <svg width="40" height="40">
+                <use
+                  class="icon-menu"
+                  href="./images/sprite.svg#icon-mobile-menu-close"
+                ></use>
+              </svg>
+            </button>
+            <ul class="mob-nav list">
+              <li class="mob-nav__item">
+                <a
+                  class="mob-nav__link mob-nav__link--current link"
+                  href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="mob-nav__item">
+                <a class="mob-nav__link link" href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="mob-nav__item">
+                <a class="mob-nav__link link" href="">Контакти</a>
+              </li>
+            </ul>
+            <div class="mob-contacts__wrap">
+              <ul class="mob-contacts list">
+                <li class="mob-contacts__item">
+                  <a
+                    class="mob-contacts__link--phone link"
+                    href="tel:+380961111111"
+                  >
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-contacts__item">
+                  <a
+                    class="mob-contacts__link--mail link"
+                    href="mailto:info@devstudio.com"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="mob-socials">
+                <li class="mob-socials__item">
+                  <a
+                    href="#"
+                    class="mob-socials__link link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="mob-socials__item">
+                  <a
+                    href="#"
+                    class="mob-socials__link link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="mob-socials__item">
+                  <a
+                    href="#"
+                    class="mob-socials__link link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Facebook</a
+                  >
+                </li>
+                <li class="mob-socials__item">
+                  <a
+                    href="#"
+                    class="mob-socials__link link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main>
       <section class="hero">
         <div class="overlay">
-          <div class="container">
+          <div class="container hero__container">
             <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
             <button type="button" class="hero__button" data-modal-open="">
               Замовити послугу
@@ -135,15 +242,30 @@
           <h2 class="section__title">Чим ми займаємося</h2>
           <ul class="what-we-do__list list">
             <li class="what-we-do__item">
-              <img src="./images/img_1.jpg" alt="Комьютер" width="370" />
+              <img
+                srcset="./images/img_1.jpg 1x, ./images/img_1-2x.jpg 2x"
+                src="./images/img_1.jpg"
+                alt="Комьютер"
+                width="370"
+              />
               <p class="what-we-do__description">Десктопні додатки</p>
             </li>
             <li class="what-we-do__item">
-              <img src="./images/img_2.jpg" alt="Телефон" width="370" />
+              <img
+                srcset="./images/img_2.jpg 1x, ./images/img_2-2x.jpg 2x"
+                src="./images/img_2-2x.jpg"
+                alt="Телефон"
+                width="370"
+              />
               <p class="what-we-do__description">Мобільні додатки</p>
             </li>
             <li class="what-we-do__item">
-              <img src="./images/img_3.jpg" alt="Планшет" width="370" />
+              <img
+                srcset="./images/img_3.jpg 1x, ./images/img_3-2x.jpg 2x"
+                src="./images/img_3.jpg"
+                alt="Планшет"
+                width="370"
+              />
               <p class="what-we-do__description">Дизайнерські рішення</p>
             </li>
           </ul>
@@ -155,11 +277,24 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="our-team__members list">
             <li class="our-team__item">
-              <img
-                src="./images/person1.jpg"
-                alt="Член команди Ігор Дем'яненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/ihor-des 1x, ./images/ihor-des-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/ihor-tab 1x, ./images/ihor-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/ihor-mob 1x, ./images/ihor-mob-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/person1.jpg"
+                  alt="Член команди Ігор Дем'яненко"
+                />
+              </picture>
               <div class="our-team__info">
                 <h3 class="our-team__name">Ігор Дем'яненко</h3>
                 <p class="our-team__role">Product Designer</p>
@@ -196,11 +331,24 @@
               </div>
             </li>
             <li class="our-team__item">
-              <img
-                src="./images/person2.jpg"
-                alt="Член команди Ольга Рєпіна"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/olha-des 1x, ./images/olha-des-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/olha-tab 1x, ./images/olha-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/olha-mob 1x, ./images/olha-mob-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/person2.jpg"
+                  alt="Член команди Ольга Рєпіна"
+                />
+              </picture>
               <div class="our-team__info">
                 <h3 class="our-team__name">Ольга Рєпіна</h3>
                 <p class="our-team__role">Frontend Developer</p>
@@ -237,11 +385,24 @@
               </div>
             </li>
             <li class="our-team__item">
-              <img
-                src="./images/person3.jpg"
-                alt="Член команди Микола Тарасов"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/mykola-des 1x, ./images/mykola-des-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/mykola-tab 1x, ./images/mykola-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/mykola-mob 1x, ./images/mykola-mob-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/person3.jpg"
+                  alt="Член команди Микола Тарасов"
+                />
+              </picture>
               <div class="our-team__info">
                 <h3 class="our-team__name">Микола Тарасов</h3>
                 <p class="our-team__role">Marketing</p>
@@ -278,11 +439,33 @@
               </div>
             </li>
             <li class="our-team__item">
-              <img
-                src="./images/person4.jpg"
-                alt="Член команди Михайло Єрмаков"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mykhailo-des        1x,
+                    ./images/mykhailo-des-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mykhailo-tab        1x,
+                    ./images/mykhailo-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mykhailo-mob        1x,
+                    ./images/mykhailo-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/person4.jpg"
+                  alt="Член команди Михайло Єрмаков"
+                />
+              </picture>
               <div class="our-team__info">
                 <h3 class="our-team__name">Михайло Єрмаков</h3>
                 <p class="our-team__role">UI Designer</p>
@@ -538,5 +721,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
